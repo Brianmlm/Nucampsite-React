@@ -23,12 +23,13 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
   addComment: (campsiteId, rating, author, text) =>
     addComment(campsiteId, rating, author, text),
-  fetchCampsites: () => fetchCampsites(),
-  resetFeedbackForm: () => actions.reset('feedbackForm'),
-  fetchComments: () => fetchComments(),
-  fetchPromotions: () => fetchPromotions(),
+  fetchCampsites: () =>( fetchCampsites()),
+  resetFeedbackForm: () => (actions.reset('feedbackForm')),
+  fetchComments: () => (fetchComments()),
+  fetchPromotions: () =>(fetchPromotions()),
 };
 class Main extends Component {
+
   componentDidMount() {
     this.props.fetchCampsites();
     this.props.fetchComments();
@@ -76,7 +77,7 @@ class Main extends Component {
         />
       );
     };
-
+    console.log(this.props);
     return (
       <div>
         <Header />

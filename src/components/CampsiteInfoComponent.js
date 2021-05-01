@@ -28,7 +28,7 @@ class CommentForm extends Component {
   toggleModal() {
     this.setState({
       isModalOpen: !this.state.isModalOpen,
-    })
+    });
   }
 
   handleSubmit(values) {
@@ -111,7 +111,7 @@ class CommentForm extends Component {
       </>
     )
   }
-}
+};
 
 function RenderCampsite({ campsite }) {
   return (
@@ -124,7 +124,7 @@ function RenderCampsite({ campsite }) {
       </card>
     </div>
   )
-}
+};
 
 function RenderComments({ comments, addComment, campsiteId }) {
   if (comments) {
@@ -202,6 +202,6 @@ function CampsiteInfo(props) {
     )
   }
   return <div />
-}
+};
 
 export default CampsiteInfo
